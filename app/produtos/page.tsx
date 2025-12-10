@@ -94,10 +94,10 @@ export default function Produtos() {
       {/* Produtos Grid */}
       <section className="section-spacing bg-white">
         <div className="container-custom">
-          <div className="space-y-16">
+          <div className="space-y-20">
             {produtos.map((produto, index) => (
-              <div key={index} className="space-y-6">
-                <div className="space-y-2">
+              <div key={index} className="space-y-8 border-b border-gray-100 pb-12 last:border-none last:pb-0">
+                <div className="space-y-3">
                   <h2 className="text-2xl md:text-3xl font-bold text-primary-700">
                     {produto.categoria}
                   </h2>
@@ -105,7 +105,7 @@ export default function Produtos() {
                 </div>
 
                 {produto.descricao && (
-                  <div className="bg-gray-50 rounded-lg p-6 space-y-4">
+                  <div className="bg-gray-50 rounded-lg p-6 md:p-8 space-y-4">
                     <p className="text-gray-700">{produto.descricao}</p>
                     {produto.vantagens && (
                       <div className="space-y-2">
@@ -124,11 +124,11 @@ export default function Produtos() {
                 )}
 
                 {produto.items && (
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
                     {produto.items.map((item, i) => (
                       <div
                         key={i}
-                        className="p-4 bg-white border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all"
+                        className="p-4 md:p-5 bg-white border border-gray-200 rounded-lg hover:border-primary-300 hover:shadow-md transition-all"
                       >
                         <p className="text-gray-700">{item}</p>
                       </div>

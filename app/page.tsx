@@ -1,33 +1,37 @@
+import HeroCarousel from "@/components/HeroCarousel";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="section-spacing-hero relative flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-primary-100">
+      <section className="section-spacing-hero relative bg-gradient-to-br from-primary-50 via-white to-primary-100">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto inline-flex flex-col items-center text-center space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight inline-block">
-              Bem-vindos à MEGA Poliuretanos
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-              Somos uma organização global com 23 anos de trajetória, comprometidos em oferecer 
-              soluções customizadas de alta qualidade em poliuretanos para o mercado brasileiro.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Link 
-                href="/sobre"
-                className="px-8 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
-              >
-                Conheça Nossa História
-              </Link>
-              <Link 
-                href="/produtos"
-                className="px-8 py-3 border-2 border-primary-600 text-primary-600 rounded-lg font-medium hover:bg-primary-50 transition-colors"
-              >
-                Nossos Produtos
-              </Link>
+          <div className="grid w-full items-center gap-12 lg:grid-cols-2">
+            <div className="space-y-6 text-center lg:text-left">
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary-600">Poliuretano sob medida</p>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                Soluções completas em poliuretano para mercados exigentes
+              </h1>
+              <p className="text-lg md:text-xl text-gray-700">
+                Oferecemos sistemas, matérias primas e consultoria técnica para aplicações industriais e calçadistas em todo o Brasil.
+              </p>
+              <div className="flex flex-col gap-4 pt-4 sm:flex-row sm:justify-center lg:justify-start">
+                <Link 
+                  href="/sobre"
+                  className="px-8 py-3 bg-primary-600 text-white rounded-lg font-medium hover:bg-primary-700 transition-colors"
+                >
+                  Conheça Nossa História
+                </Link>
+                <Link 
+                  href="/produtos"
+                  className="px-8 py-3 border-2 border-primary-600 text-primary-600 rounded-lg font-medium hover:bg-primary-50 transition-colors"
+                >
+                  Nossos Produtos
+                </Link>
+              </div>
             </div>
+            <HeroCarousel />
           </div>
         </div>
       </section>
